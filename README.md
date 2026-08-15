@@ -1,5 +1,7 @@
 # ParoQuant Shuffle Ablation
 
+[github](https://github.com/z-lab/paroquant) · [arxiv](https://arxiv.org/abs/2511.10645)
+
 ## 동기
 
 논문은 Motivation 섹션 세번째 문단에서 magnitude 차이가 큰 pair, 즉 outlier와 normal channel을 짝지어 rot을 거는 것이 효과적이라 주장함
