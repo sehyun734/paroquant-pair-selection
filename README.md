@@ -12,7 +12,7 @@
 
 그러나 논문 A.1 알고리즘에서도, [실제 구현](https://github.com/z-lab/paroquant/blob/legacy/paroquant/optimize.py)에서도 크기는 보지 않고 후보를 통째로 shuffle함...
 
-> P_shuffled ← Shuffle(P)
+> $P_\text{shuffled} \leftarrow \text{Shuffle}(P)$
 
 > For each rotation, we randomly select available pairs while ensuring the rotation remains independent.
 
