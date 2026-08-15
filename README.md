@@ -183,13 +183,13 @@ q_proj layer=10 n_rots=8 [Llama-3.1-8B](runs/loss_260810-172628.log) · [Mistral
 
 정렬의 손해는 pair 선별 자체 문제가 맞나 봄
 
-남는 건 n_rots가 늘어날수록 정렬이 불리해진다는 것. 그런데 생각해보니 rot 2부터도 처음 매긴 점수가 그대로 남아 있는지는 확인한 적이 없음. 이미 쓴 pair는 건너뛰고, rot가 `w`를 바꾸니 같은 pair라도 점수가 달라짐. 확인해 봄
+남는 건 n_rots가 늘어날수록 정렬이 불리해진다는 것. 그런데 생각해보니 rot 2부터도 처음 매긴 점수가 그대로 남아 있는지는 확인한 적이 없음. 이미 쓴 pair는 건너뛰고, rot가 w를 바꾸니 같은 pair라도 점수가 달라짐. 확인해 봄
 
 ### rot별 pair 점수
 
 | 지표 | 뜻 |
 | --- | --- |
-| orig | 원본 `w`에서 처음 pair 고를 때 채널 쌍 점수 |
+| orig | 원본 w에서 처음 pair 고를 때 채널 쌍 점수 |
 | hit | rot 전(alpha만 걸린) 대비 실제 rot 시점의 점수 비 |
 
 [Llama-3.1-8B q_proj layer=10 n_rots=8](runs/pairs_260811-173134.log). rng의 0은 alpha만 걸고 rot는 안 한 시점. loss는 같은 조건의 [n_rots별 rng](#n_rots별-rng) 로그에서. rand는 seed 최소~최대, dummy는 rot별 합. 점수 없는 rand·butterfly는 orig·hit 제외
@@ -260,7 +260,7 @@ q_proj layer=10 n_rots=8 [Llama-3.1-8B](runs/loss_260810-172628.log) · [Mistral
 
 "정렬하면 손해"가 "대리지표로 정렬하면 손해"로 좁혀짐. 정렬 자체가 아니라 직감으로 고른 대리지표가 문제였음
 
-남는 건 여기서도 n_rots가 늘수록 이득이 줄어드는 것. 아마 oracle도 점수를 원본 `w`로 처음 한 번만 매기니, 최적인 시점은 rot 1뿐이고 그 뒤로는 rot가 `w`를 바꾸면서 점수가 달라지는 것일 거임. 암튼 그래서 [rot별 pair 점수](#rot별-pair-점수)와 같이 `pairs.py`로 확인
+남는 건 여기서도 n_rots가 늘수록 이득이 줄어드는 것. 아마 oracle도 점수를 원본 w로 처음 한 번만 매기니, 최적인 시점은 rot 1뿐이고 그 뒤로는 rot가 w를 바꾸면서 점수가 달라지는 것일 거임. 암튼 그래서 [rot별 pair 점수](#rot별-pair-점수)와 같이 `pairs.py`로 확인
 
 ### oracle pair 점수
 
@@ -278,7 +278,7 @@ q_proj layer=10 n_rots=8 [Llama-3.1-8B](runs/loss_260810-172628.log) · [Mistral
 
 ### sched별 loss
 
-그런데 rot마다 최적 pair를 고르려면 앞선 rot이 반영된 `w`로 점수를 재야 함. 곧 앞선 theta가 확정돼 있어야 한다는 뜻. 그래서 theta도 순차로 학습해야 하는데, 이러면 재채점·순차화라는 두 축이 걸림. 갈라서 2×2로 봄. alpha도 같은 이유로 확정돼 있어야 하므로 pre로 둠
+그런데 rot마다 최적 pair를 고르려면 앞선 rot이 반영된 w로 점수를 재야 함. 곧 앞선 theta가 확정돼 있어야 한다는 뜻. 그래서 theta도 순차로 학습해야 하는데, 이러면 재채점·순차화라는 두 축이 걸림. 갈라서 2×2로 봄. alpha도 같은 이유로 확정돼 있어야 하므로 pre로 둠
 
 | sched | 뜻 |
 | --- | --- |
