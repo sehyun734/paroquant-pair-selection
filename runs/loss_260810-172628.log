@@ -1,0 +1,12 @@
+model             layer linear            arm       seed   n_rots n_steps     loss   dummy     rng    kurt
+Llama-3.1-8B      10    self_attn.q_proj  scaling   -      -      800        74.2%       -   65.5%    0.54
+Llama-3.1-8B      10    self_attn.q_proj  rand      42     8      800        49.5%      17   32.8%   -0.19
+Llama-3.1-8B      10    self_attn.q_proj  rand      128    8      800        49.6%      11   32.7%   -0.19
+Llama-3.1-8B      10    self_attn.q_proj  rand      1582   8      800        49.7%      18   32.7%   -0.19
+Llama-3.1-8B      10    self_attn.q_proj  rand      5096   8      800        49.6%      10   32.5%   -0.19
+Llama-3.1-8B      10    self_attn.q_proj  rand      31337  8      800        49.5%       8   32.9%   -0.19
+Llama-3.1-8B      10    self_attn.q_proj  butterfly -      8      800        49.7%       0   32.7%   -0.19
+Llama-3.1-8B      10    self_attn.q_proj  mag_diff  -      8      800        54.2%       0   40.1%   -0.06
+Llama-3.1-8B      10    self_attn.q_proj  mag_sim   -      8      800        53.0%     129   37.6%   -0.10
+Llama-3.1-8B      10    self_attn.q_proj  corr      -      8      800        49.8%      15   33.3%   -0.18
+Llama-3.1-8B      10    self_attn.q_proj  a_mag     -      8      800        54.2%       0   40.9%   -0.04

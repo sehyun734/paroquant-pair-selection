@@ -1,0 +1,11 @@
+model             layer linear            arm       n_rots   blocks   dist
+Qwen3-0.6B        0     self_attn.q_proj  butterfly 1          64.0   1.00
+Qwen3-0.6B        0     self_attn.q_proj  butterfly 2          32.0   1.33
+Qwen3-0.6B        0     self_attn.q_proj  butterfly 4           8.0   2.13
+Qwen3-0.6B        0     self_attn.q_proj  butterfly 8           1.0   3.53
+Qwen3-0.6B        0     self_attn.q_proj  butterfly 16          1.0   3.53
+Llama-3.1-8B      0     self_attn.q_proj  butterfly 1          64.0   1.00
+Llama-3.1-8B      0     self_attn.q_proj  butterfly 2          32.0   1.33
+Llama-3.1-8B      0     self_attn.q_proj  butterfly 4           8.0   2.13
+Llama-3.1-8B      0     self_attn.q_proj  butterfly 8           1.0   3.53
+Llama-3.1-8B      0     self_attn.q_proj  butterfly 16          1.0   3.53

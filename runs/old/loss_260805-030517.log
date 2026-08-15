@@ -1,0 +1,4 @@
+model         layer linear            arm          loss   dummy
+Llama-3.1-8B  0     self_attn.q_proj  rand        42.8%       1
+Llama-3.1-8B  0     self_attn.q_proj  mag_diff    49.8%       0
+Llama-3.1-8B  0     self_attn.q_proj  corr        55.4%       3

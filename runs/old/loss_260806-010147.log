@@ -1,0 +1,10 @@
+model         layer linear            arm          loss   dummy
+Qwen3-0.6B    0     self_attn.q_proj  rand        53.1%       4
+Qwen3-0.6B    0     self_attn.q_proj  fixed       56.6%       0
+Qwen3-0.6B    0     self_attn.q_proj  mag_diff    54.1%       0
+Qwen3-0.6B    10    self_attn.q_proj  rand        31.2%       4
+Qwen3-0.6B    10    self_attn.q_proj  fixed       32.3%       0
+Qwen3-0.6B    10    self_attn.q_proj  mag_diff    32.5%       0
+Qwen3-0.6B    20    self_attn.q_proj  rand        31.9%       4
+Qwen3-0.6B    20    self_attn.q_proj  fixed       33.6%       0
+Qwen3-0.6B    20    self_attn.q_proj  mag_diff    32.6%       0

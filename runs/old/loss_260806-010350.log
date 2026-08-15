@@ -1,0 +1,10 @@
+model         layer linear            arm          loss   dummy
+Mistral-7B-v0.30     self_attn.q_proj  rand         9.7%      17
+Mistral-7B-v0.30     self_attn.q_proj  fixed       10.0%       0
+Mistral-7B-v0.30     self_attn.q_proj  mag_diff    11.6%       0
+Mistral-7B-v0.310    self_attn.q_proj  rand        38.9%      17
+Mistral-7B-v0.310    self_attn.q_proj  fixed       40.3%       0
+Mistral-7B-v0.310    self_attn.q_proj  mag_diff    41.5%       0
+Mistral-7B-v0.320    self_attn.q_proj  rand        53.1%      17
+Mistral-7B-v0.320    self_attn.q_proj  fixed       54.9%       0
+Mistral-7B-v0.320    self_attn.q_proj  mag_diff    56.3%       0

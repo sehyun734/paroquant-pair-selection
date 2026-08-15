@@ -1,0 +1,3 @@
+model         layer linear            arm          loss   dummy
+Llama-3.1-8B  0     mlp.down_proj     rand        81.2%       0
+Llama-3.1-8B  0     mlp.down_proj     mag_diff    81.7%       0

@@ -1,0 +1,10 @@
+model             layer linear            arm       seed   n_rots n_steps     loss   dummy     rng    kurt
+Mistral-7B-v0.3   10    self_attn.q_proj  rand      42     8      800        35.7%      17   34.9%   -0.41
+Mistral-7B-v0.3   10    self_attn.q_proj  rand      128    8      800        35.5%      11   34.4%   -0.41
+Mistral-7B-v0.3   10    self_attn.q_proj  rand      1582   8      800        35.6%      18   34.4%   -0.42
+Mistral-7B-v0.3   10    self_attn.q_proj  rand      5096   8      800        35.4%      10   34.4%   -0.41
+Mistral-7B-v0.3   10    self_attn.q_proj  rand      31337  8      800        35.7%       8   35.0%   -0.40
+Mistral-7B-v0.3   10    self_attn.q_proj  butterfly -      8      800        35.5%       0   34.7%   -0.44
+Mistral-7B-v0.3   10    self_attn.q_proj  mag_diff  -      8      800        39.4%       0   41.3%   -0.10
+Mistral-7B-v0.3   10    self_attn.q_proj  corr      -      8      800        36.3%       8   35.9%   -0.35
+Mistral-7B-v0.3   10    self_attn.q_proj  a_mag     -      8      800        39.5%       0   41.8%   -0.07

@@ -1,0 +1,3 @@
+model             layer linear            arm       seed   n_rots n_steps     loss   dummy
+Qwen3-0.6B        0     self_attn.q_proj  scaling   -      -      200        76.0%       -
+Qwen3-0.6B        0     mlp.gate_proj     scaling   -      -      200        73.7%       -
