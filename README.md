@@ -63,8 +63,6 @@ rebuttal Q4의 이 표로 실험 환경을 우선 재현. scaling은 alpha만 �
 | corr | 상관관계 높은 순서 |
 | a_mag | 입력 크기를 반영한 중요도 차이 큰 순서 (AWQ식 activation-aware) |
 
-butterfly는 채널 번호를 stride로 XOR해 짝지음. grp_size 128이면 stride가 7개뿐이라 n_rots=8의 여덟 번째는 첫 번째와 같은 pair를 다시 씀. theta는 rot마다 따로 붙으니 rot 수는 여덟이 맞고, pair가 겹치는 것은 뒤에서 볼 연결 구조에만 영향
-
 저자 주장이 맞다면 여섯 모두 loss가 비슷해야 함. 이때 rand만 무작위성을 타므로 seed 5개로 돌려 최소~최대 혹은 평균으로 보고
 
 다만 이미 쓴 pair를 건너뛰는 제약 탓에 일부 rot은 pair를 다 채우지 못함. 그러면 loss가 나쁜 이유가 arm이 아니라 rot을 덜 한 탓일 수도 있음. 논문은 무시할 수준이라고 넘어가긴 했음
