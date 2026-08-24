@@ -1,4 +1,4 @@
-# ParoQuant Shuffle Ablation
+# ParoQuant Pair Ablation
 
 [github](https://github.com/z-lab/paroquant) · [arxiv](https://arxiv.org/abs/2511.10645)
 
