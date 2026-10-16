@@ -12,7 +12,7 @@
 - 크기 차이 arm은 rotation을 쌓을수록 random보다 나빠짐.
 - 연결성과 학습 부족은 이 차이의 원인이 아님.
 - 처음 매긴 pair 점수는 rotation을 쌓을수록 낮아짐. 다만 이것만으로 차이가 설명되지는 않음.
-- range를 직접 보는 oracle은 rotation 1개에서 가장 좋음. 다만 rotation을 쌓을수록 이득이 사라짐.
+- range를 직접 보는 oracle은 rotation 1개에서 가장 좋음. 
 - rotation마다 다시 고르고 하나씩 학습하면 현행 구현보다 좋음. 다만 학습량을 맞추면 현행 구현이 이김.
 
 ## 한계
