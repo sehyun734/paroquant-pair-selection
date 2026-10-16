@@ -1,0 +1,38 @@
+n_bit=4
+d_grp=128
+n_calib=16
+d_seq=1024
+n_rots=[1, 2, 4, 8]
+n_theta=16
+n_step=800
+lr=0.01
+crits=['rand', 'rng_drop']
+i_blks=[0, 10, 20]
+lins=['self_attn.q_proj']
+seed=42
+
+lin_path                                crit  n_rot     loss      rng  n_dummy
+model.layers.0.self_attn.q_proj         rand      1    68.12    91.27        0
+                                                  2    61.57    85.17        0
+                                                  4    53.67    77.65        2
+                                                  8    48.43    71.30        2
+                                    rng_drop      1    66.43    87.36        0
+                                                  2    62.38    83.55        0
+                                                  4    54.34    77.22        1
+                                                  8    49.53    71.62       13
+model.layers.10.self_attn.q_proj        rand      1    37.65    89.80        0
+                                                  2    34.61    85.14        0
+                                                  4    31.52    78.41        2
+                                                  8    28.25    71.80        2
+                                    rng_drop      1    35.98    86.29        0
+                                                  2    34.25    82.92        0
+                                                  4    31.62    78.02        2
+                                                  8    28.18    71.08       15
+model.layers.20.self_attn.q_proj        rand      1    39.87    83.20        0
+                                                  2    36.10    78.87        0
+                                                  4    32.54    73.23        2
+                                                  8    28.23    66.57        2
+                                    rng_drop      1    38.28    80.20        0
+                                                  2    35.00    76.28        0
+                                                  4    32.33    71.82        1
+                                                  8    28.78    66.11       10

@@ -1,0 +1,64 @@
+n_bit=4
+d_grp=128
+n_calib=16
+d_seq=1024
+n_rots=[1, 8]
+n_theta=16
+n_step=1600
+lr=0.01
+crits=['rand', 'rng_drop']
+alpha_scheds=['joint', 'pre']
+theta_scheds=['joint', 'seq']
+i_blks=[0, 10, 20]
+lins=['self_attn.q_proj']
+seed=42
+
+lin_path                                crit  alpha_sched  theta_sched  n_rot  n_step_rot     loss  n_dummy   time
+model.layers.0.self_attn.q_proj         rand        joint        joint      1        1600    68.12        0  00:11
+                                                                            8        1600    47.55        2  00:36
+                                                                   seq      1        1600    68.12        0  00:11
+                                                                            8         200    57.04        4  00:23
+                                                      pre        joint      1        1600    69.92        0  00:09
+                                                                            8        1600    52.08        2  00:35
+                                                                   seq      1        1600    69.92        0  00:09
+                                                                            8         200    61.61        4  00:22
+                                    rng_drop        joint        joint      1        1600    65.81        0  00:19
+                                                                            8        1600    48.55       13  00:45
+                                                                   seq      1        1600    65.81        0  00:19
+                                                                            8         200    51.99        5  01:34
+                                                      pre        joint      1        1600    67.63        0  00:18
+                                                                            8        1600    51.70       17  00:43
+                                                                   seq      1        1600    67.63        0  00:18
+                                                                            8         200    55.33        6  01:33
+model.layers.10.self_attn.q_proj        rand        joint        joint      1        1600    37.46        0  00:10
+                                                                            8        1600    27.58        2  00:36
+                                                                   seq      1        1600    37.46        0  00:11
+                                                                            8         200    32.16        4  00:23
+                                                      pre        joint      1        1600    38.19        0  00:09
+                                                                            8        1600    29.78        2  00:35
+                                                                   seq      1        1600    38.19        0  00:09
+                                                                            8         200    34.09        4  00:22
+                                    rng_drop        joint        joint      1        1600    35.87        0  00:19
+                                                                            8        1600    27.82       15  00:44
+                                                                   seq      1        1600    35.87        0  00:19
+                                                                            8         200    29.38        6  01:34
+                                                      pre        joint      1        1600    36.73        0  00:18
+                                                                            8        1600    29.82       14  00:43
+                                                                   seq      1        1600    36.73        0  00:18
+                                                                            8         200    30.92        4  01:33
+model.layers.20.self_attn.q_proj        rand        joint        joint      1        1600    39.55        0  00:11
+                                                                            8        1600    27.46        2  00:36
+                                                                   seq      1        1600    39.55        0  00:11
+                                                                            8         200    33.47        4  00:23
+                                                      pre        joint      1        1600    40.75        0  00:09
+                                                                            8        1600    29.53        2  00:35
+                                                                   seq      1        1600    40.75        0  00:09
+                                                                            8         200    35.66        4  00:22
+                                    rng_drop        joint        joint      1        1600    38.21        0  00:19
+                                                                            8        1600    27.48       10  00:45
+                                                                   seq      1        1600    38.21        0  00:19
+                                                                            8         200    30.34        7  01:34
+                                                      pre        joint      1        1600    37.77        0  00:18
+                                                                            8        1600    30.64       14  00:43
+                                                                   seq      1        1600    37.77        0  00:18
+                                                                            8         200    31.32        8  01:33

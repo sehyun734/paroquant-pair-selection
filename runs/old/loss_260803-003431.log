@@ -1,3 +1,0 @@
-model       layer linear               scaling
-Qwen3-0.6B  0     self_attn.q_proj       87.0%
-Qwen3-0.6B  0     mlp.gate_proj          85.9%

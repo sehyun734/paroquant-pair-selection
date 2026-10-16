@@ -1,0 +1,16 @@
+n_bit=4
+d_grp=128
+n_calib=16
+d_seq=1024
+n_rots=[0, 8]
+n_step=200
+lr=0.01
+i_blks=[0]
+lins=['self_attn.q_proj', 'mlp.gate_proj']
+seed=42
+
+lin_path                            n_rot       l2      mse
+model.layers.0.self_attn.q_proj         0    86.90    75.51
+                                        8    72.73    52.90
+model.layers.0.mlp.gate_proj            0    85.85    73.71
+                                        8    73.94    54.67

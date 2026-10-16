@@ -1,2 +1,0 @@
-model         layer linear            arm          loss   dummy
-Llama-3.1-8B  0     self_attn.q_proj  rand        57.9%       0
